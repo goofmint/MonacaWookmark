@@ -11,11 +11,9 @@
     <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="js/vendors/wookmark/css/main.css">
-    <!-- <link rel="stylesheet" href="js/vendors/wookmark/css/overview.css"> -->
-    
-    <script src="js/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="js/vendors/wookmark/wookmark.js"></script>
+    <link rel="stylesheet" href="vendors/wookmark/css/main.css">
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/wookmark/wookmark.js"></script>
     <script>
         ons.ready(function() {
         });
@@ -30,10 +28,7 @@
           var menu = document.getElementById('menu');
           content.load(page).then(function(page) {
             if ($(page).attr("id") === 'setting') {
-              $('#wookmark').wookmark({
-                outerOffset: 10,
-                itemWidth: 210
-              });
+              $('#wookmark').wookmark();
             }
             menu.close();
           });
